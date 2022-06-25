@@ -1,0 +1,79 @@
+{
+    -fx-font-size: 12px;
+    -fx-color-background-light: #fff;
+    -fx-color-text-primary: #000;
+    -fx-fill: -fx-color-text-primary;
+}
+
+.h1,
+.h1 .text {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+}
+
+.h2,
+.h2 .text {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+}
+
+.h3,
+.h3 .text {
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+}
+
+.input-label {
+    -fx-font-weight: 700;
+}
+
+
+/*
+ LOG FLOW
+*/
+
+.log-flow {
+    -fx-padding: 5px;
+    -fx-border-style: solid;
+    -fx-border-width: 1;
+    -fx-background-color: -fx-color-background-light;
+}
+
+.log-flow .log-record:info {
+    -fx-fill: -fx-color-text-primary;
+}
+
+.log-flow .log-record:severe {
+    -fx-fill: #a93226;
+}
+
+.log-flow .log-record:warning {
+    -fx-fill: #CA6F1E;
+}
+
+.log-flow .log-record:fine {
+    -fx-fill: #229954;
+}
+
+.log-flow .log-record:other {
+    -fx-fill: #344051;
+}
+
+.log-flow .log-record:config {
+    -fx-fill: #2471A3;
+}
+
+
+/*
+ STATUS LABEL
+*/
+
+.status-connected,
+.status-connected .text {
+    -fx-fill: #048b04;
+}
+
+.status-disconnected,
+.status-disconnected .text {
+    -fx-fill: #970202;
+}

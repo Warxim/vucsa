@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.warxim'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(":vucsa-common")
+    compile project(":vucsa-client")
+    compile project(":vucsa-server")
+}
+
+distributions {
+    main {
+        distributionBaseName = "vucsa"
+        contents {
+            from("LICENSE.md") {
+                into ""
+            }
+
+            from("CHANGELOG.md") {
+                into ""
+            }
+
+            from("scripts") {
+                into ""
+            }
+
+            from("vucsa-server/server") {
+                into "server"
+            }
+
+            startScripts.onlyIf {false}
+        }
+    }
+}

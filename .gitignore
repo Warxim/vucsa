@@ -1,0 +1,9 @@
+# Gradle
+.gradle
+gradle**
+# Eclipse, Idea, ...
+.settings
+.idea
+bin
+build
+doc

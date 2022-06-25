@@ -1,0 +1,6 @@
+rootProject.name = 'VuCSA'
+
+include 'vucsa-common'
+include 'vucsa-client'
+include 'vucsa-server'
+

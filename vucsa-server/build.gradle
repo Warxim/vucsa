@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.warxim'
+version '1.0'
+mainClassName = 'com.warxim.vucsa.server.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':vucsa-common')
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+
+    testImplementation 'org.testng:testng:7.6.0'
+    testImplementation 'org.assertj:assertj-core:3.23.1'
+}
+
+test {
+    useTestNG()
+}
+
+application {
+    executableDir = ''
+
+    copy {
+        from './server'
+        into 'build/run/server'
+    }
+}
+
+// Set run working directory to build/run
+File runningDir = new File('build/run')
+runningDir.mkdirs()
+tasks.run.workingDir = runningDir

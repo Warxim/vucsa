@@ -1,0 +1,59 @@
+plugins {
+    id 'java-library'
+    id 'java'
+    id 'eclipse'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+javafx {
+    version = "11.0.2"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web']
+}
+
+group 'com.warxim'
+version '1.0'
+mainClassName = 'com.warxim.vucsa.client.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':vucsa-common')
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    implementation group: 'org.openjfx', name: 'javafx-base', version: javafx.version, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-base', version: javafx.version, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-base', version: javafx.version, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: javafx.version, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: javafx.version, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-controls', version: javafx.version, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javafx.version, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javafx.version, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: javafx.version, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javafx.version, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javafx.version, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-graphics', version: javafx.version, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-media', version: javafx.version, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-media', version: javafx.version, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-media', version: javafx.version, classifier: 'linux'
+    implementation group: 'org.openjfx', name: 'javafx-web', version: javafx.version, classifier: 'win'
+    implementation group: 'org.openjfx', name: 'javafx-web', version: javafx.version, classifier: 'mac'
+    implementation group: 'org.openjfx', name: 'javafx-web', version: javafx.version, classifier: 'linux'
+}
+
+// Export com.sun.javafx.css (for css editing)
+application {
+    applicationDefaultJvmArgs = [
+            "--add-opens=javafx.graphics/com.sun.javafx.css=ALL-UNNAMED"
+    ]
+    executableDir = ''
+}
+
+// Set run working directory to build/run
+File runningDir = new File('build/run')
+runningDir.mkdirs()
+tasks.run.workingDir = runningDir

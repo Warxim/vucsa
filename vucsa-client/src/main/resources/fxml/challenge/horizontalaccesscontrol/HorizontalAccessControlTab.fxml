@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="468.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" styleClass="h1" text="Horizontal Access Control Vulnerability" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Imagine that you are logged in as a user and you have the following GUI accessible. Try to find a way to obtain documents of other users." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0" />
+      <VBox layoutX="10.0" layoutY="58.0" prefHeight="392.0" prefWidth="686.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label styleClass="input-label" text="Your documents (select to display text content):" />
+            <ListView fx:id="documentInput" prefHeight="410.0" prefWidth="248.0" />
+            <Label styleClass="input-label" text="Content:" />
+            <TextArea fx:id="contentOutput" prefHeight="410.0" prefWidth="705.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
