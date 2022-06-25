@@ -37,6 +37,9 @@ public class GuiApplication extends Application {
         Application.setUserAgentStylesheet(Application.STYLESHEET_MODENA);
         StyleManager.getInstance().addUserAgentStylesheet(getClass().getResource(GuiConstant.MAIN_CSS_PATH).toString());
 
+        // Store host services inside GUI bundle
+        GuiBundle.getInstance().setHostServices(getHostServices());
+
         var fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/Application.fxml"));
         fxmlLoader.setController(new ApplicationController());
 

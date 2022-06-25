@@ -107,8 +107,8 @@ public final class AboutDialog {
      */
     private static void onWebClick(ActionEvent event) {
         try {
-            Desktop.getDesktop().browse(new URI(Constant.WEB));
-        } catch (IOException | URISyntaxException e) {
+            GuiBundle.getInstance().getHostServices().showDocument(Constant.WEB);
+        } catch (Exception e) {
             Logger.getGlobal().log(Level.SEVERE, "Could not open VuCSA link.");
         }
     }

@@ -17,6 +17,7 @@
 package com.warxim.vucsa.client.gui;
 
 import com.warxim.vucsa.client.gui.controller.ApplicationController;
+import javafx.application.HostServices;
 import javafx.scene.image.Image;
 import lombok.Getter;
 
@@ -41,6 +42,11 @@ public final class GuiBundle {
      * Application controller
      */
     private ApplicationController applicationController;
+
+    /**
+     * Host services
+     */
+    private HostServices hostServices;
 
     private GuiBundle() {
         logo = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/Logo.png")));
@@ -76,6 +82,22 @@ public final class GuiBundle {
      */
     public void setApplicationController(ApplicationController controller) {
         applicationController = controller;
+    }
+
+    /**
+     * Obtains host services
+     * @return Host services
+     */
+    public HostServices getHostServices() {
+        return hostServices;
+    }
+
+    /**
+     * Sets host services
+     * @param hostServices Host services
+     */
+    public void setHostServices(HostServices hostServices) {
+        this.hostServices = hostServices;
     }
 
     /**
