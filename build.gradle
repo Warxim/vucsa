@@ -28,6 +28,10 @@ distributions {
                 into ""
             }
 
+            from("README.md") {
+                into ""
+            }
+
             from("scripts") {
                 into ""
             }
