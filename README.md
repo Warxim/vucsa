@@ -24,9 +24,9 @@ These packages contain sh/bat scripts that will run the server and client using 
 
 ## Project Structure
 Project is divided into three modules:
-- **vulnerable-common** - common functionality for both client and server (including protocol processing utilities)
-- **vulnerable-client** - vulnerable client with JavaFX GUI
-- **vulnerable-server** - vulnerable server for terminal use
+- **vucsa-common** - common functionality for both client and server (including protocol processing utilities)
+- **vucsa-client** - vulnerable client with JavaFX GUI
+- **vucsa-server** - vulnerable server for terminal use
 
 ## Data Structure
 Messages transmitted between server and client have the following simple format:
