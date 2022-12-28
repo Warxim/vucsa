@@ -20,7 +20,9 @@ which describes how to use the open-source tool PETEP to exploit them.
 ## How to Run
 In order to run the vulnerable server and client, you can use one of releases on GitHub
 or run gradle assemble, which creates distribution packages (for both Windows and Unix).
-These packages contain sh/bat scripts that will run the server and client using JVM.
+These packages contain sh/bat scripts that will run the server and client using JVM. 
+
+You need Java 11 or newer version to run VuCSA.
 
 ## Project Structure
 Project is divided into three modules:
