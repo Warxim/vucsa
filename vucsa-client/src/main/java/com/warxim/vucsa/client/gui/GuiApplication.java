@@ -27,6 +27,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
+import java.awt.Taskbar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Client GUI application.
  * <p>Starts Vulnerable Client GUI.</p>
@@ -34,6 +39,8 @@ import javafx.stage.Stage;
 public class GuiApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+        setupIcons(stage);
+
         Application.setUserAgentStylesheet(Application.STYLESHEET_MODENA);
         StyleManager.getInstance().addUserAgentStylesheet(getClass().getResource(GuiConstant.MAIN_CSS_PATH).toString());
 
@@ -47,7 +54,6 @@ public class GuiApplication extends Application {
 
         var scene = new Scene(root);
         stage.setTitle("VuCSA Client v" + Constant.VERSION);
-        stage.getIcons().add(GuiBundle.getInstance().getLogo());
         stage.setWidth(1200);
         stage.setHeight(900);
         stage.setScene(scene);
@@ -66,5 +72,25 @@ public class GuiApplication extends Application {
 
         Bundle.getInstance().destroy();
         GuiBundle.getInstance().destroy();
+    }
+
+    /**
+     * Sets up icons for the application
+     */
+    protected void setupIcons(Stage stage) {
+        // Set stage icons (WIN, LINUX)
+        stage.getIcons().add(GuiBundle.getInstance().getLogo());
+
+        // Little workaround to set icons for macOS taskbar using AWT
+        try {
+            if (!Taskbar.isTaskbarSupported()) {
+                return;
+            }
+            var iconImage = ImageIO.read(getClass().getResourceAsStream(GuiConstant.ICON_PATH));
+            var taskbar = Taskbar.getTaskbar();
+            taskbar.setIconImage(iconImage);
+        } catch (Exception e) {
+            Logger.getGlobal().log(Level.SEVERE, "Could not set taskbar icon!", e);
+        }
     }
 }

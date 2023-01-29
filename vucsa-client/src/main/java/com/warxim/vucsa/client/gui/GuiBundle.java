@@ -49,7 +49,7 @@ public final class GuiBundle {
     private HostServices hostServices;
 
     private GuiBundle() {
-        logo = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/img/Logo.png")));
+        logo = new Image(Objects.requireNonNull(getClass().getResourceAsStream(GuiConstant.ICON_PATH)));
     }
 
     /**

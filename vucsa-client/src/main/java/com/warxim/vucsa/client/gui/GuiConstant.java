@@ -21,6 +21,7 @@ public final class GuiConstant {
      * Path to main CSS file of the application
      */
     public static final String MAIN_CSS_PATH = "/css/Main.css";
+    public static final String ICON_PATH = "/img/Logo.png";
 
     public static final int LOG_TAB_ORDER = 1;
     public static final int SETTINGS_TAB_ORDER = 2;
