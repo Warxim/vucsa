@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-    compile project(":vucsa-common")
-    compile project(":vucsa-client")
-    compile project(":vucsa-server")
+    project(":vucsa-common")
+    project(":vucsa-client")
+    project(":vucsa-server")
 }
 
 distributions {

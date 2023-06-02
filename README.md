@@ -12,7 +12,7 @@ Currently the vulnerable application contains the following challenges:
 6. Horizontal Access Control
 7. Vertical Access Control
 
-If you want to know how to solve these challenges, take a look at the [PETEP website](http://petep.warxim.com/methodology/), 
+If you want to know how to solve these challenges, take a look at the [PETEP website](https://petep.warxim.com/methodology/), 
 which describes how to use the open-source tool PETEP to exploit them.
 
 **Tip:** Before you start hacking, do not forget to check the data structure of messages bellow.

@@ -2,6 +2,12 @@
 
 All notable changes to this project will are documented in this changelog file.
 
+## [1.0.1] - 2023-06-02
+### Added
+- fixed macOS icon
+- updated readme
+- fixed url
+
 ## [1.0.0] - 2022-01-01
 ### Added
 - common functionality

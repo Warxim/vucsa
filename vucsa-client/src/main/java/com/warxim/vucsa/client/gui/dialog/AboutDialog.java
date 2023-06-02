@@ -27,10 +27,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -74,7 +70,7 @@ public final class AboutDialog {
         link.setOnAction(AboutDialog::onWebClick);
 
         // Copyright
-        var copyrightLabel = new Label("Copyright (C) Michal Valka, 2022, all rights reserved.");
+        var copyrightLabel = new Label("Copyright (C) Michal Valka, 2023, all rights reserved.");
 
         // Grid
         var grid = new GridPane();
