@@ -2,6 +2,10 @@
 
 All notable changes to this project will are documented in this changelog file.
 
+## [1.1.0] - 2023-09-09
+### Added
+- added RCE Deserialization challenge
+
 ## [1.0.1] - 2023-06-02
 ### Added
 - fixed macOS icon

@@ -22,6 +22,6 @@
       <Label fx:id="statusLabel" layoutX="100.0" layoutY="87.0" text="-" />
       <Label fx:id="serverHostLabel" layoutX="100.0" layoutY="112.0" text="-" />
       <Label fx:id="serverPortLabel" layoutX="100.0" layoutY="137.0" text="-" />
-      <Button fx:id="startStopButton" layoutX="210.0" layoutY="83.0" mnemonicParsing="false" onAction="#onStartStopClick" prefHeight="25.0" prefWidth="107.0" text="CONNECT" />
+      <Button alignment="CENTER" contentDisplay="CENTER" fx:id="startStopButton" layoutX="210.0" layoutY="83.0" mnemonicParsing="false" onAction="#onStartStopClick" prefHeight="25.0" prefWidth="107.0" text="CONNECT" />
    </children>
 </AnchorPane>

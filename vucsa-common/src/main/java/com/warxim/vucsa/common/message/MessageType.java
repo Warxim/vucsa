@@ -21,6 +21,9 @@ import com.warxim.vucsa.common.message.commandexecution.response.PingResponseDes
 import com.warxim.vucsa.common.message.commandexecution.response.PingResponseSerializer;
 import com.warxim.vucsa.common.message.horizontalaccesscontrol.request.DocumentContentRequest;
 import com.warxim.vucsa.common.message.horizontalaccesscontrol.response.DocumentContentResponse;
+import com.warxim.vucsa.common.message.rcedeserialization.TextMessage;
+import com.warxim.vucsa.common.message.rcedeserialization.TextMessageDeserializer;
+import com.warxim.vucsa.common.message.rcedeserialization.TextMessageSerializer;
 import com.warxim.vucsa.common.message.sqlinjection.response.SearchResponseDeserializer;
 import com.warxim.vucsa.common.message.verticalaccesscontrol.request.*;
 import com.warxim.vucsa.common.message.verticalaccesscontrol.response.*;
@@ -80,6 +83,7 @@ public enum MessageType {
     VERTICAL_ACCESS_CONTROL_SECRET_RESPONSE(13, SecretResponse.class, new SecretResponseSerializer(), new SecretResponseDeserializer()),
     HORIZONTAL_ACCESS_CONTROL_DOCUMENT_CONTENT_REQUEST(14, DocumentContentRequest.class, new DocumentContentRequestSerializer(), new DocumentContentRequestDeserializer()),
     HORIZONTAL_ACCESS_CONTROL_DOCUMENT_CONTENT_RESPONSE(15, DocumentContentResponse.class, new DocumentContentResponseSerializer(), new DocumentContentResponseDeserializer()),
+    RCE_DESERIALIZATION_TEXT_MESSAGE(16, TextMessage.class, new TextMessageSerializer(), new TextMessageDeserializer()),
     ;
 
     /**

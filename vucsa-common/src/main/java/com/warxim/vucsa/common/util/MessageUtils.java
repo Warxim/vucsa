@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.util.Optional;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -83,7 +84,12 @@ public final class MessageUtils {
                 .build();
 
         var deserializer = type.getDeserializer();
-        return deserializer.deserializeMessage(serializedMessage);
+        try {
+            return deserializer.deserializeMessage(serializedMessage);
+        } catch (Exception e) {
+            Logger.getGlobal().log(Level.SEVERE, "Could not deserialize message!", e);
+        }
+        return Optional.empty();
     }
 
     private MessageUtils() {}

@@ -8,7 +8,7 @@
    <children>
       <Label layoutX="14.0" layoutY="14.0" styleClass="h1" text="Vertical Access Control Vulnerability" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
       <Label layoutX="14.0" layoutY="14.0" text="Find a way to change your application role by modifying communication and use a secret function, which is only available for admins." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0" />
-      <Button layoutX="377.0" layoutY="59.0" mnemonicParsing="false" onAction="#onRefreshClick" prefHeight="25.0" prefWidth="80.0" text="Refresh" AnchorPane.leftAnchor="377.0" AnchorPane.topAnchor="59.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="377.0" layoutY="59.0" mnemonicParsing="false" onAction="#onRefreshClick" prefHeight="25.0" prefWidth="80.0" text="Refresh" AnchorPane.leftAnchor="377.0" AnchorPane.topAnchor="59.0" />
       <Label layoutX="10.0" layoutY="63.0" styleClass="input-label" text="Username:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="63.0" />
       <Label fx:id="usernameLabel" layoutX="76.0" layoutY="63.0" text="-" AnchorPane.leftAnchor="85.0" AnchorPane.topAnchor="63.0" />
       <Label layoutX="208.0" layoutY="63.0" styleClass="input-label" text="Role:" AnchorPane.leftAnchor="208.0" AnchorPane.topAnchor="63.0" />
@@ -27,7 +27,7 @@
          <children>
             <Label layoutY="6.0" text="Welcome administrator!" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
             <Label layoutX="-4.0" layoutY="58.0" text="Secret:" AnchorPane.leftAnchor="0.0" />
-            <Button layoutX="2.0" layoutY="26.0" mnemonicParsing="false" onAction="#onDownloadSecretClick" text="Download Secret" AnchorPane.leftAnchor="10.0" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="26.0" mnemonicParsing="false" onAction="#onDownloadSecretClick" text="Download Secret" AnchorPane.leftAnchor="10.0" />
             <Label fx:id="secretLabel" layoutX="46.0" layoutY="58.0" text="-" />
          </children>
       </AnchorPane>

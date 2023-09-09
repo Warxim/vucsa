@@ -1,4 +1,14 @@
+@font-face {
+    src: url('../fonts/NotoSans-Regular.ttf');
+}
+
+@font-face {
+    font-weight: bold;
+    src: url('../fonts/NotoSans-Bold.ttf');
+}
+
 {
+    -fx-font-family: 'Noto Sans', 'sans-serif';
     -fx-font-size: 12px;
     -fx-color-background-light: #fff;
     -fx-color-text-primary: #000;

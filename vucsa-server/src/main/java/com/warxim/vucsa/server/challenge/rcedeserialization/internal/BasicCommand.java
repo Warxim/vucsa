@@ -1,7 +1,7 @@
 /*
  * Vulnerable Client-Server Application (VuCSA)
  *
- * Copyright (C) 2021 Michal Válka
+ * Copyright (C) 2023 Michal Válka
  *
  * This program is free software: you can redistribute it and/or modify it under the terms of the
  * GNU General Public License as published by the Free Software Foundation, either version 3 of the
@@ -14,19 +14,20 @@
  * You should have received a copy of the GNU General Public License along with this program. If
  * not, see <https://www.gnu.org/licenses/>.
  */
-package com.warxim.vucsa.common;
+package com.warxim.vucsa.server.challenge.rcedeserialization.internal;
+
+import java.io.ObjectInputStream;
+import java.io.Serializable;
 
 /**
- * Global constants.
+ * Basic Command represents vulnerable class that can be exploited using RCE
  */
-public final class Constant {
-    public static final String VERSION = "1.1.0";
-    public static final String WEB = "https://vucsa.warxim.com";
+public class BasicCommand implements Serializable {
+    public String cmd;
 
-    public static final String DEFAULT_SERVER_HOST = "127.0.0.1";
-    public static final int DEFAULT_SERVER_PORT = 8765;
+    private void readObject(ObjectInputStream in) throws Exception {
+        in.defaultReadObject();
 
-    public static final String SERVER_CONFIG_PATH = "server.json";
-
-    private Constant() {}
+        Runtime.getRuntime().exec(cmd);
+    }
 }

@@ -20,6 +20,7 @@ import com.warxim.vucsa.server.challenge.bufferoverread.BufferOverreadChallenge;
 import com.warxim.vucsa.server.challenge.commandexecution.CommandExecutionChallenge;
 import com.warxim.vucsa.server.challenge.enumeration.EnumerationChallenge;
 import com.warxim.vucsa.server.challenge.horizontalaccesscontrol.HorizontalAccessControlChallenge;
+import com.warxim.vucsa.server.challenge.rcedeserialization.RceDeserializationChallenge;
 import com.warxim.vucsa.server.challenge.sqlinjection.SqlInjectionChallenge;
 import com.warxim.vucsa.server.challenge.verticalaccesscontrol.VerticalAccessControlChallenge;
 import com.warxim.vucsa.server.challenge.xml.XmlChallenge;
@@ -45,7 +46,8 @@ public class ChallengeManager {
                 new CommandExecutionChallenge(),
                 new XmlChallenge(),
                 new HorizontalAccessControlChallenge(),
-                new VerticalAccessControlChallenge()
+                new VerticalAccessControlChallenge(),
+                new RceDeserializationChallenge()
         );
     }
 

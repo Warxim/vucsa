@@ -28,6 +28,7 @@ public final class ChallengeConstant {
     public static final int VERTICAL_ACCESS_CONTROL_USER_INFO_TARGET = 1006;
     public static final int VERTICAL_ACCESS_CONTROL_SECRET_TARGET = 1007;
     public static final int HORIZONTAL_ACCESS_CONTROL_DOCUMENT_CONTENT_TARGET = 1008;
+    public static final int RCE_DESERIALIZATION_TARGET = 1009;
 
     public static final String CHALLENGES_DIRECTORY = "server/challenge/";
 

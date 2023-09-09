@@ -19,6 +19,7 @@ package com.warxim.vucsa.client.gui.controller;
 import com.warxim.vucsa.client.Bundle;
 import com.warxim.vucsa.client.challenge.commandexecution.CommandExecutionController;
 import com.warxim.vucsa.client.challenge.enumeration.EnumerationController;
+import com.warxim.vucsa.client.challenge.rcedeserialization.RceDeserializationController;
 import com.warxim.vucsa.client.challenge.verticalaccesscontrol.VerticalAccessControlController;
 import com.warxim.vucsa.client.challenge.ChallengeController;
 import com.warxim.vucsa.client.challenge.ChallengeWrapper;
@@ -190,6 +191,11 @@ public class ApplicationController implements Initializable, ConnectionListener 
                 "Vertical Access Control",
                 "/fxml/challenge/verticalaccesscontrol/VerticalAccessControlTab.fxml",
                 new VerticalAccessControlController(),
+                ++tabOrder);
+        initChallengeTab(
+                "RCE Deserialization",
+                "/fxml/challenge/rcedeserialization/RceDeserializationTab.fxml",
+                new RceDeserializationController(),
                 ++tabOrder);
     }
 }

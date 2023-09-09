@@ -18,6 +18,6 @@
             <ListView fx:id="responseInput" prefHeight="410.0" prefWidth="248.0" />
          </children>
       </VBox>
-      <Button layoutX="635.0" layoutY="59.0" mnemonicParsing="false" onAction="#onSendClick" prefHeight="25.0" prefWidth="80.0" text="Send" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="59.0" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="635.0" layoutY="59.0" mnemonicParsing="false" onAction="#onSendClick" prefHeight="25.0" prefWidth="80.0" text="Send" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="59.0" />
    </children>
 </AnchorPane>
