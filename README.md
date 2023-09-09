@@ -75,11 +75,35 @@ The goal is to create exploits for both paths and execute malicious command on t
 ## How to Run
 In order to run the vulnerable server and client, you can use one of releases on GitHub
 or run gradle assemble, which creates distribution packages (for both Windows and Unix).
-These packages contain sh/bat scripts that will run the server and client using JVM. 
+These packages contain sh/bat scripts that will run the server and client using JVM:
 
-You need Java 11 or newer version to run VuCSA.
+```shell
+# Linux / Mac
+./client.sh
+./server.sh
+
+# Windows
+./client.bat
+./server.bat
+```
+
+You need **Java 11** or newer version to run VuCSA.
 
 ***Note:** For Mac with ARM64 architecture (M1, M2 chips), use special build for Java 17.*
+
+## Run Configuration
+Server configuration is automatically created if it does not exist 
+and after that it is loaded from `server.json` in the same directory where the server is running:
+```json
+{
+  "network": {
+    "serverHost": "0.0.0.0",
+    "serverPort": 8765
+  }
+}
+```
+
+Client configuration can be specified in the running application.
 
 ## Project Structure
 Project is divided into three modules:
