@@ -79,6 +79,7 @@ These packages contain sh/bat scripts that will run the server and client using 
 
 ```shell
 # Linux / Mac
+chmod +x client.sh server.sh
 ./client.sh
 ./server.sh
 
