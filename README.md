@@ -72,6 +72,11 @@ The goal is to create exploits for both paths and execute malicious command on t
 
 **Tip:** You can use the server JAR as library to make the exploit creation easier.
 
+## Requirements
+You need **Java 11** or newer version to run VuCSA.
+
+***Note:** For Mac with ARM64 architecture (M1, M2 chips), use special build for Java 17.*
+
 ## How to Run
 In order to run the vulnerable server and client, you can use one of releases on GitHub
 or run gradle assemble, which creates distribution packages (for both Windows and Unix).
@@ -84,15 +89,14 @@ chmod +x client.sh server.sh
 ./server.sh
 
 # Windows
-./client.bat
-./server.bat
+client.bat
+server.bat
 ```
 
-You need **Java 11** or newer version to run VuCSA.
+***Note:** These run scripts contain useful variables, including path to Java executable.
+You might need to change it if you do not have it in PATH or you use multiple Java versions.*
 
-***Note:** For Mac with ARM64 architecture (M1, M2 chips), use special build for Java 17.*
-
-## Run Configuration
+### Run Configuration
 Server configuration is automatically created if it does not exist 
 and after that it is loaded from `server.json` in the same directory where the server is running:
 ```json
